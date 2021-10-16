@@ -1,12 +1,16 @@
 import 'package:flutter/material.dart';
 import 'theme_class.dart';
 import 'circular_image.dart';
+class AuthorCard extends StatefulWidget {
+     @override
+  _AuthorCardState createState() => _AuthorCardState();
+}
 
-class AuthorCard extends StatelessWidget {
-  // 1
-  final String authorName;
+class _AuthorCardState extends State<AuthorCard> {
+    final String authorName;
   final String title;
   final ImageProvider? imageProvider;
+bool _isFavorited = false;
 
   const AuthorCard({
     Key? key,
@@ -15,7 +19,6 @@ class AuthorCard extends StatelessWidget {
     this.imageProvider,
   }) : super(key: key);
 
-  // 2
   @override
   Widget build(BuildContext context) {
     // TODO: Replace return Container(...);
@@ -52,18 +55,23 @@ class AuthorCard extends StatelessWidget {
             ],
           ),
           // TODO 2: add IconButton
-          IconButton(
-              // 4
-              icon: const Icon(Icons.favorite_border),
-              iconSize: 30,
-              color: Colors.grey[400],
-              // 5
-              onPressed: () {
-                const snackBar = SnackBar(content: Text('Favorite Pressed'));
-                ScaffoldMessenger.of(context).showSnackBar(snackBar);
-              }),
+        IconButton(
+  // 1
+  icon: Icon(_isFavorited ? Icons.favorite : Icons.favorite_border),
+  iconSize: 30,
+  // 2
+  color: Colors.red[400],
+  onPressed: () {
+    // 3
+    setState(() {
+      _isFavorited = !_isFavorited;
+    });
+  },
+)
+
         ],
       ),
     );
   }
-}
+
+
