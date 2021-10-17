@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../theme.dart';
+import '../fooderlich_theme.dart';
 import '../models/models.dart';
 import 'author_card.dart';
 
