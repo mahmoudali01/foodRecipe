@@ -28,7 +28,7 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        titleCenter: true,
+        centerTitle: true,
         title: Text(
           'Fooderlich',
           style: Theme.of(context).textTheme.headline6,
