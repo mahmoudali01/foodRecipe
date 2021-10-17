@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'screens/explore_screen.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -13,8 +12,7 @@ class _HomeState extends State<Home> {
 
   static List<Widget> pages = <Widget>[
     // TODO: Replace with ExploreScreen
-    ExploreScreen(),
-
+    Container(color: Colors.white),
     // TODO: Replace with RecipesScreen
     Container(color: Colors.green),
     Container(color: Colors.blue),
@@ -30,7 +28,6 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        centerTitle: true,
         title: Text(
           'Fooderlich',
           style: Theme.of(context).textTheme.headline6,
