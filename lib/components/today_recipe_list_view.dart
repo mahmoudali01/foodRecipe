@@ -55,7 +55,7 @@ class TodayRecipeListView extends StatelessWidget {
               },
             ),
 
-            color: Colors.grey,
+            // color: Colors.grey,
           ),
         ],
       ),
