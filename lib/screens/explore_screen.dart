@@ -33,7 +33,7 @@ class ExploreScreen extends StatelessWidget {
               // TODO: Replace this with FriendPostListView
               Container(
                 height: 400,
-                color: Colors.green,
+                color: Colors.lightBlue,
               ),
             ],
           );
