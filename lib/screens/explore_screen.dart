@@ -11,7 +11,6 @@ class ExploreScreen extends StatelessWidget {
   ExploreScreen({Key? key}) : super(key: key);
 
   @override
-  @override
   Widget build(BuildContext context) {
     // 1
     return FutureBuilder(
